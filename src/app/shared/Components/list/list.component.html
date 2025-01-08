@@ -1,4 +1,4 @@
-<mat-list class="list" *ngFor="let character of items"  >
+<mat-list class="list" *ngFor="let character of items" [routerLink]="['/character', character.id]" >
     <mat-list-item  class="list__item" @listAnimation >
       <div class="list__info-container">
         <div class="list__info-text">

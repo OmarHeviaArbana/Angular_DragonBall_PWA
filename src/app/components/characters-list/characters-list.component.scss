@@ -1,7 +1,10 @@
 .container {
-  max-height: 100vh;
+  /* max-height: 100vh;
+  overflow-y: auto; */
+  height: 90vh;
   overflow-y: auto;
   padding: 20px;
+
 
   &__actionbuttons {
     display:          flex;

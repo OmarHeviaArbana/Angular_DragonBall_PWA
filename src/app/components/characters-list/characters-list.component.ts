@@ -1,7 +1,8 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { CharactersService } from '../../services/characters.service';
 import { Character } from 'src/app/models/character.interface';
 import { CharactersResponse } from 'src/app/models/character-response.interface';
+import { trigger, style, animate, transition, query, stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-characters-list',
@@ -18,30 +19,40 @@ export class CharactersListComponent implements OnInit{
   totalPages: number = 0;
   cardsView: boolean = true;
   listView: boolean = false;
-  show: boolean = false
 
-  @HostListener('window:scroll', ['$event'])
+  @ViewChild('container', { static: false }) container!: ElementRef;
+
+  @HostListener('scroll', ['$event'])
   onScroll(event: any): void {
-    const bottom = event.target.scrollHeight === event.target.scrollTop + window.innerHeight;
-    if (bottom && !this.loading) {
+    const scrollElement = this.container.nativeElement;
+    const bottom = scrollElement.scrollHeight - scrollElement.scrollTop <= scrollElement.clientHeight + 20;
+
+    if (bottom && !this.loading && this.currentPage < this.totalPages) {
       this.loading = true;
+      const currentScrollPosition = scrollElement.scrollTop
       this.currentPage++;
-      this.loadCharacters();
+      this.loadCharacters(currentScrollPosition);
     }
   }
 
   constructor(private characterService: CharactersService) {}
 
   ngOnInit(): void {
-    this.loadCharacters()
+    this.loadCharacters(0)
   }
 
-  loadCharacters(): void {
+  loadCharacters(previousScrollPosition: number): void {
     this.loading = true;
     this.characterService.getAllCharacters(this.currentPage, this.limit).subscribe({
       next: (response: CharactersResponse) => {
         this.characters = [...this.characters, ...response.items];
         this.loading = false;
+        this.totalPages = response.meta.totalPages;
+
+        setTimeout(() => {
+          const scrollElement = this.container.nativeElement;
+          scrollElement.scrollTop = previousScrollPosition;
+        }, 0);
       },
       error: (error: any) => {
         console.error('Error fetching characters:', error);

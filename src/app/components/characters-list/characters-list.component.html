@@ -1,15 +1,16 @@
-<div class="container" (scroll)="onScroll($event)"  >
+<div class="container" (scroll)="onScroll($event)" #container>
   <div class="container__actionbuttons">
     <button
-
       [ngClass]="{ 'container__actionbuttons-button--active': cardsView, 'container__actionbuttons-button--inactive': !cardsView }"
-      (click)="setCardsView()">
+      (click)="setCardsView()"
+      aria-label="Vista Cards">
       <mat-icon class="container__actionbuttons-icon">dataset</mat-icon>
     </button>
     <button
       class="container__actionbuttons-button"
       [ngClass]="{ 'container__actionbuttons-button--active': listView, 'container__actionbuttons-button--inactive': !listView }"
-      (click)="setListView()">
+      (click)="setListView()"
+      aria-label="Vista Listado">
       <mat-icon class="container__actionbuttons-icon">format_list_bulleted</mat-icon>
     </button>
   </div>
@@ -21,7 +22,6 @@
     [listView]="listView"
     >
   </app-grid>
-
   <app-spinner
     [loading]="loading">
   </app-spinner>
