@@ -12,6 +12,11 @@
           "/manifest.webmanifest",
           "/*.css",
           "/*.js"
+        ],
+        "urls": [
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap",
+          "https://fonts.googleapis.com/icon?family=Material+Icons"
         ]
       }
     },
@@ -37,7 +42,7 @@
       "cacheConfig": {
         "strategy": "freshness",
         "maxAge": "1d",
-        "maxSize": 100,
+        "maxSize": 30,
         "timeout": "1s"
       }
     }
