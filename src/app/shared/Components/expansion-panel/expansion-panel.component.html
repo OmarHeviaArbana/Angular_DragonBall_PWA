@@ -1,0 +1,13 @@
+<mat-expansion-panel class="panel">
+  <mat-expansion-panel-header>
+    <mat-panel-title class="panel__title">
+      <mat-icon class="panel__icon">info</mat-icon>Características principales
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+    <p class="panel__character-description">{{ character.description }}</p>
+    <div class="panel__group-text">
+      <p class="panel__text">Ki: <span class="panel__text--highlighted">{{ character.ki }}</span></p>
+      <p class="panel__text">Max Ki: <span class="panel__text--highlighted">{{ character.maxKi }}</span></p>
+      <p class="panel__text">Affiliation: <span class="panel__text--highlighted">{{ character.affiliation }}</span></p>
+    </div>
+</mat-expansion-panel>

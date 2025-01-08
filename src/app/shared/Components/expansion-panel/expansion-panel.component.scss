@@ -1,0 +1,38 @@
+.panel {
+  background-color: rgb(60,62,68);
+  margin-top:       40px;
+  @media (min-width: 1200px) {
+    max-width:  70%;
+    margin:     auto;
+  }
+  &__title {
+    color:      rgb(230, 230, 230);
+    font-weight:  500;
+    font-size:    1.3rem;
+    &--highlighted { color: rgb(251,192,45)}
+  }
+  &__icon {
+    color:      rgb(251,192,45);
+    margin-right: 10px
+  }
+  &__character-description {
+    font-size:      1rem;
+    margin-bottom:  30px;
+    color:        rgb(230, 230, 230);
+  }
+  &__group-text {
+    border:         1px solid rgb(251,192,45);
+    border-radius:  8px;
+    padding:        16px;
+    width:          fit-content;
+    margin:         20px auto;
+  }
+  &__text {
+    color:        rgb(230, 230, 230);
+    font-size:      1.2rem;
+    font-weight:    400;
+    margin-bottom:  10px;
+    &--highlighted { color: rgb(251,192,45) }
+    &:last-child { margin-bottom: 0; }
+  }
+}

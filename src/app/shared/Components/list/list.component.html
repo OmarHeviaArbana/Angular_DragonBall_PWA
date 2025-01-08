@@ -1,0 +1,23 @@
+<mat-list class="list" *ngFor="let character of items"  >
+    <mat-list-item  class="list__item" @listAnimation >
+      <div class="list__info-container">
+        <div class="list__info-text">
+          <img matListItemIcon class="list__image" mat-card-image [src]="character.image" [alt]="character.name">
+          <div>
+            <p matListItemTitle class="list__title">{{character.name}}</p>
+            <p matListItemLine class="list__subtitle">{{character.race}}</p>
+            <div>
+              <p matListItemLine class="list__text">Ki: <span class="list__text--highlighted">{{ character.ki }}</span></p>
+              <p matListItemLine class="list__text">Max Ki: <span class="list__text--highlighted" >{{ character.maxKi }}</span></p>
+              <p matListItemLine class="list__text">Affiliation: <span class="list__text--highlighted">{{ character.affiliation }}</span></p>
+            </div>
+         </div>
+      </div>
+        <a mat-mini-fab class="list__button" [routerLink]="['/character', character.id]" >
+          <mat-icon class="list__button-icon">arrow_circle_right</mat-icon>
+        </a>
+      </div>
+  </mat-list-item>
+  <mat-divider class="list__divider"></mat-divider>
+</mat-list>
+

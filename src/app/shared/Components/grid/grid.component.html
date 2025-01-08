@@ -1,0 +1,13 @@
+<div *ngIf="!loading && !error">
+  <mat-grid-list *ngIf="cardsView" [cols]="cols" rowHeight="630" gutterSize="30px">
+    <mat-grid-tile *ngFor="let character of characters">
+      <app-card
+          [item]="character">
+        </app-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <app-list
+       *ngIf="listView"
+       [items]="characters">
+    </app-list>
+</div>

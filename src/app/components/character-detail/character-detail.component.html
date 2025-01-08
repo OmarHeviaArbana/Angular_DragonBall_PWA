@@ -1,0 +1,17 @@
+<div class="detail-container" >
+
+  <a class="detail-container__backButton"  routerLink="/">
+    <mat-icon class="detail-container__buttonIcon">arrow_circle_left</mat-icon>
+  </a>
+
+  <h1 class="detail-container__title">{{ character.name }}</h1>
+  <h2 class="detail-container__subtitle-text">{{ character.race }}</h2>
+  <img class="detail-container__image" mat-card-image [src]="character.image" [alt]="character.name ">
+  <app-expansion-panel
+  [character]="character">
+
+  </app-expansion-panel>
+
+</div>
+
+

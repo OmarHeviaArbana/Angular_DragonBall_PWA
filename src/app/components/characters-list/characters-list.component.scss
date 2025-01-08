@@ -1,0 +1,31 @@
+.container {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+
+  &__actionbuttons {
+    display:          flex;
+    justify-content:  flex-end;
+    gap:              20px;
+    margin-bottom:    20px;
+    &-button {
+      &--active {
+        background-color: rgb(230, 230, 230);
+        padding:            10px;
+        border:             none;
+        border-radius:      6px;
+        cursor: pointer;
+      }
+      &--inactive {
+        background-color: rgb(164, 165, 170);
+        padding:            10px;
+        border:             none;
+        border-radius:      6px;
+        cursor: pointer;
+      }
+    }
+    &-icon {
+      font-size: 1.5rem;
+    }
+  }
+}

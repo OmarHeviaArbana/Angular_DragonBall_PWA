@@ -1,0 +1,41 @@
+.card {
+  height:         100%;
+  width:          100%;
+  border-radius:  8px;
+  cursor:         pointer;
+
+  &__title {
+    font-size:    1.4rem;
+    font-weight:  600;
+    color:      rgb(39, 43, 51);
+
+  }
+  &__subtitle-text {
+    margin-bottom:  7px;
+    margin-left:    2px;
+    font-size:      1.1rem;
+    font-weight:    500;
+    color:        rgb(60,62,68);
+  }
+  &__image-container {
+    display:        flex;
+    flex-direction: column;
+    width:          280px;
+    height:         500px;
+  }
+  &__image {
+    height:     80%;
+    object-fit: contain;
+  }
+  &__content {
+    padding-top:      16px;
+    background-color: rgb(60,62,68);
+    border-radius:    0 0 6px 6px;
+  }
+  &__text {
+    color:      rgb(230, 230, 230);
+    font-weight:  500;
+    font-size:    1rem;
+    &--highlighted { color: rgb(251,192,45) }
+  }
+}
