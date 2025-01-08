@@ -17,7 +17,7 @@
         cursor: pointer;
       }
       &--inactive {
-        background-color: rgb(164, 165, 170);
+        background-color: rgb(188, 188, 188);
         padding:            10px;
         border:             none;
         border-radius:      6px;
@@ -26,6 +26,7 @@
     }
     &-icon {
       font-size: 1.5rem;
+      color: rgb(39, 43, 51);;
     }
   }
 }
