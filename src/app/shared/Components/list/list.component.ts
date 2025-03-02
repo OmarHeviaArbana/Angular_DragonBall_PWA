@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { trigger, style, animate, transition, query, stagger } from '@angular/animations';
 
-
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
