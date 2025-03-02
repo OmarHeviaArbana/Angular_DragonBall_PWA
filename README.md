@@ -1,4 +1,4 @@
-# Angular Pwa Dragonball
+# Angular Progresive Web App Dragonball
 
 ## Descripción
 
@@ -16,12 +16,12 @@ https://dragonball-pwa.netlify.app/
 - Consumo de una API pública.
 - Utilizción de componentes de Angular Material para un listado y vista detalle.
 - Lighthouse es una herramienta para auditar la PWA y se genera un reporte completo.
-
+<div>
 <image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px ; border-radius: 10px ; border: 20px solid white ; width: 300px" src="src/assets/miniatura_one.png" alt="Vista principal">
 <image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px ; border-radius: 10px ; border: 20px solid white; width: 300px" src="src/assets/miniatura_two.png" alt="Vista listado">
 <image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px ; border-radius: 10px ; border: 20px solid white; width: 300px" src="src/assets/miniatura_three.png" alt="Vista Detalle">
 <image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px ; border-radius: 10px ; border: 20px solid white; width: 300px;" src="src/assets/miniatura_five.png" alt="App icon ">
-
+</div>
 ## Informe Lighthouse
 
 La herramienta LightHouse proporciona un análisis detallado del rendimiento, accesibilidad, mejores prácticas y SEO de una aplicación web.
@@ -44,6 +44,9 @@ En este link se pueden ver los resultados y los puntos de mejora para próximos 
 **Fecha:** Diciembre 2024
 
 ---
+
+# Angular Progresive Web App Dragonball
+
 ## Description
 
 Progressive Web App (PWA) that consumes a public API and can be installed on a mobile device as if it were a native application.
