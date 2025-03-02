@@ -22,6 +22,7 @@ https://dragonball-pwa.netlify.app/
 <image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px ; border-radius: 10px ; border: 20px solid white; width: 300px" src="src/assets/miniatura_three.png" alt="Vista Detalle">
 <image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px ; border-radius: 10px ; border: 20px solid white; width: 300px;" src="src/assets/miniatura_five.png" alt="App icon ">
 </div>
+  
 ## Informe Lighthouse
 
 La herramienta LightHouse proporciona un análisis detallado del rendimiento, accesibilidad, mejores prácticas y SEO de una aplicación web.
